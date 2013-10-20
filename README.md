@@ -1,6 +1,6 @@
 # graphite-supervisord-rpm
 
-How to install and configure Graphite 0.9.x via RPMs on RHEL 6 and run it under process supervision with supervisord.
+How to install and configure Graphite 0.9.12 via RPMs on RHEL 6 and run it under process supervision with supervisord.
 
 
 # What we want to do
@@ -8,7 +8,7 @@ How to install and configure Graphite 0.9.x via RPMs on RHEL 6 and run it under 
 * We will build RPM files for Graphite (which does not provide any offically).  This allows a smooth transition to a
   config management tool such as Puppet or Chef to automate deployments.
 * We will use ``gunicorn`` to run ``graphite-web``.  By default it will listen on
-  [http://localhost:8080/](http://localhost:8080/) after installation.
+  [http://your-server-ip:8080/](http://your-server-ip:8080/) after installation.
 * We rely on ``supervisord`` to run -- and start/stop -- the Graphite-related daemons ``gunicorn`` and ``carbon-cache``
   (the latter daemon collects the actual stats data from other applications)
 
