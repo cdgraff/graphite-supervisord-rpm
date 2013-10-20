@@ -133,7 +133,17 @@ $ sudo chkconfig supervisord on
 # Recommended: secure supervisord configuration file (may contain user credentials)
 $ sudo chmod 600 /etc/supervisord.conf
 ```
+# If you are installing this into Amazon EC2 Instance, and use the default repo provided by them, need download manually
+some dependencies:
 
+```bash
+$ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-fonts-compat-0.3-15.el6.noarch.rpm
+$ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-fixed-fonts-0.3-15.el6.noarch.rpm
+$ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-console-fonts-0.3-15.el6.noarch.rpm
+$ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-lucida-typewriter-fonts-0.3-15.el6.noarch.rpm
+$ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-miscfixed-fonts-0.3-15.el6.noarch.rpm
+
+```
 
 # Installing Graphite
 
