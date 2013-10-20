@@ -49,13 +49,13 @@ $ fpm -s python -t rpm \
     -d python-devel \
     -d python-twisted \
     -d python-memcached \
-    -d python-sqlite2 \
+    -d python24-sqlite \
     -d bitmap -d bitmap-console-fonts -d bitmap-fixed-fonts -d bitmap-fonts-compat \
     -d bitmap-lucida-typewriter-fonts -d bitmap-miscfixed-fonts \
     -d pycairo \
     carbon
 
-# this will create => python-carbon-0.9.10-1.noarch.rpm
+# this will create => python-carbon-0.9.12-1.noarch.rpm
 ```
 
 
@@ -72,13 +72,13 @@ $ fpm -s python -t rpm \
     -d python-devel \
     -d python-twisted \
     -d python-memcached \
-    -d python-sqlite2 \
+    -d python24-sqlite \
     -d bitmap -d bitmap-console-fonts -d bitmap-fixed-fonts -d bitmap-fonts-compat \
     -d bitmap-lucida-typewriter-fonts -d bitmap-miscfixed-fonts \
     -d pycairo \
     whisper
 
-# this will create => python-whisper-0.9.10-1.noarch.rpm
+# this will create => python-whisper-0.9.12-1.noarch.rpm
 ```
 
 
@@ -94,14 +94,14 @@ $ fpm -s python -t rpm \
     -d python-devel \
     -d python-twisted \
     -d python-memcached \
-    -d python-sqlite2 \
+    -d python24-sqlite \
     -d bitmap -d bitmap-console-fonts -d bitmap-fixed-fonts -d bitmap-fonts-compat \
     -d bitmap-lucida-typewriter-fonts -d bitmap-miscfixed-fonts \
     -d pycairo \
     -d python-gunicorn \
     graphite-web
 
-# this will create => python-graphite-web-0.9.10-1.noarch.rpm
+# this will create => python-graphite-web-0.9.12-1.noarch.rpm
 ```
 
 
