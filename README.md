@@ -22,10 +22,10 @@ at the end of this document).
 The instructions below are based on the following software versions:
 
 * OS: RHEL 6 / CentOS 6
-* [Graphite](http://graphite.wikidot.com/) 0.9.10
+* [Graphite](http://graphite.readthedocs.org/) 0.9.12
 
 
-# Building RPMs for Graphite 0.9.10
+# Building RPMs for Graphite 0.9.12
 
 We are using [fpm](https://github.com/jordansissel/fpm) to build our own RPMs for Graphite.
 
@@ -140,9 +140,9 @@ $ sudo chmod 600 /etc/supervisord.conf
 ## Install our custom Graphite RPM files
 
 ```bash
-$ sudo yum install python-carbon-0.9.10-1.noarch.rpm \
-                   python-whisper-0.9.10-1.noarch.rpm \
-                   python-graphite-web-0.9.10-1.noarch.rpm
+$ sudo yum install python-carbon-0.9.12-1.noarch.rpm \
+                   python-whisper-0.9.12-1.noarch.rpm \
+                   python-graphite-web-0.9.12-1.noarch.rpm
 ```
 
 By using ``yum`` instead of ``rpm`` to install the RPM files we can automatically resolve (download and install) the
@@ -223,7 +223,7 @@ $ sudo chown -R graphite:graphite /var/log/gunicorn-graphite
 Add gunicorn to ``supervisord``:
 
     [program:graphite-gunicorn]
-    command=gunicorn_django --bind=127.0.0.1:8080 --log-file=/var/log/gunicorn-graphite/gunicorn.log --preload --pythonpath=/opt/graphite/webapp/graphite --settings=settings --workers=3 --pid=/var/run/gunicorn-graphite/gunicorn-graphite.pid
+    command=gunicorn_django --bind=0.0.0.0:8080 --log-file=/var/log/gunicorn-graphite/gunicorn.log --preload --pythonpath=/opt/graphite/webapp/graphite --settings=settings --workers=3 --pid=/var/run/gunicorn-graphite/gunicorn-graphite.pid
     directory=/opt/graphite
     user=graphite
     autostart=True
@@ -310,7 +310,7 @@ You can also verify correct startup by inspecting the log files at ``/var/log/ca
 
 Now you are ready to send metrics to Graphite from your applications.
 
-Open Graphite's web interface at [http://localhost:8080/](http://localhost:8080/) in your browser and take a look
+Open Graphite's web interface at [http://your-server-ip:8080/](http://your-server-ip:8080/) in your browser and take a look
 around.
 
 # Where to go from here
