@@ -133,7 +133,8 @@ $ sudo chkconfig supervisord on
 # Recommended: secure supervisord configuration file (may contain user credentials)
 $ sudo chmod 600 /etc/supervisord.conf
 ```
-# If you are installing this into Amazon EC2 Instance, and use the default repo provided by them, need download manually
+# Amazon EC2 Instance Note
+If you are installing this into Amazon EC2 Instance, and use the default repo provided by them, need download manually
 some dependencies:
 
 ```bash
