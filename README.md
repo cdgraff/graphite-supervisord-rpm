@@ -143,7 +143,12 @@ $ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-fixed-fonts-0.3
 $ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-console-fonts-0.3-15.el6.noarch.rpm
 $ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-lucida-typewriter-fonts-0.3-15.el6.noarch.rpm
 $ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-miscfixed-fonts-0.3-15.el6.noarch.rpm
+$ wget http://mirror.centos.org/centos/6/os/i386/Packages/bitmap-fangsongti-fonts-0.3-15.el6.noarch.rpm
+```
 
+Installing dependencies:
+```bash
+$ yum install -y bitmap-*
 ```
 
 # Installing Graphite
