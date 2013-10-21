@@ -324,6 +324,12 @@ graphite-gunicorn RUNNING    pid 22057, uptime 0:00:10
 You can also verify correct startup by inspecting the log files at ``/var/log/carbon/`` and
 ``/var/log/gunicorn-graphite/``.
 
+Add your Public host or IP into the ALLOWED_HOTS
+```bash
+$ nano /opt/graphite/webapp/graphite/local_settings.py
+
+$ ALLOWED_HOSTS = ["127.0.0.1", "localhost", "ec2-XXX-XXX-XXX-XXX.compute-1.amazonaws.com"]
+```
 Now you are ready to send metrics to Graphite from your applications.
 
 Open Graphite's web interface at [http://your-server-ip:8080/](http://your-server-ip:8080/) in your browser and take a look
